@@ -1,10 +1,10 @@
 import 'package:http/http.dart' as http;
 
-void main() async {
+void main() {
   var url = Uri.https('jsonplaceholder.typicode.com', 'users/1');
   print("Hello 1\n");
-  final response = await http.get(url);
-  print(response);
-
+  http.get(url).then((value) {
+    print(value);
+  });
   print("\nHello 2");
 }
